@@ -30,12 +30,12 @@ class Producto {
             btnAgregar.addEventListener('click',()=> agregarCarrito (productoElegido))
         } 
 }
-let iphone11 = new Producto('Iphone 11', 500, 10, 1,'/Imagenes/Iphone11.png')
-let iphone12 = new Producto('Iphone 12', 700, 5, 2, '/Imagenes/Iphone12Pro.png')
-let iphone13 = new Producto('Iphone 13', 900, 5, 3, '/Imagenes/Iphone13Pro.png')
-let macbookAirM1 = new Producto('Macbook Air M1', 900, 10, 4, '/Imagenes/macbookairm1.jpg')
-let macbookAirM2 = new Producto('Macbook Air M2', 1200, 10, 5, '/Imagenes/macbookairm2.jpg')
-let macbookPro = new Producto('Macbook Pro M1pro', 1900, 5, 6, '/Imagenes/macbookprom1projpg.jpg')
+let iphone11 = new Producto('Iphone 11', 500, 10, 1,'./Imagenes/Iphone11.png')
+let iphone12 = new Producto('Iphone 12', 700, 5, 2, './Imagenes/Iphone12Pro.png')
+let iphone13 = new Producto('Iphone 13', 900, 5, 3, './Imagenes/Iphone13Pro.png')
+let macbookAirM1 = new Producto('Macbook Air M1', 900, 10, 4, './Imagenes/macbookairm1.jpg')
+let macbookAirM2 = new Producto('Macbook Air M2', 1200, 10, 5, './Imagenes/macbookairm2.jpg')
+let macbookPro = new Producto('Macbook Pro M1pro', 1900, 5, 6, './Imagenes/macbookprom1projpg.jpg')
 
 let totalCompra = 0
 /* let producto = parseInt(prompt('Ingresa el numero del producto que quieres comprar: 1.Iphone 11 - 2.Iphone 12- 3.Iphone 13 4.Macbook Air M1- 5.Macbook air M2- 6.Macbook Pro M1Pro-')
