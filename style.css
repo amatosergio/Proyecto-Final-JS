@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    background-color: #03aac7c7;
+    height: 10vh;
+}
+#TituloPrincipal{
+    color: black;
+    width: 100vw;
+    text-align: center;
+    padding: 40px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+p{
+    color: #E9EEF2;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.card{
+    max-width: 250px;
+    position: relative;
+    padding: 15px 10px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    background: black;
+    box-shadow: 6px 6px 10px rgb(66, 66, 66);
+}  
+
+.imgProducto{
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+.btnAgregar{
+    height: 40px;
+    padding: 0 25px;
+    border-radius: 25px;
+    border: 2px solid #326789;
+    background: #E9EEF2;
+    color: black;
+    transition: .5s ease;
+}
+.btnAgregar:hover{
+    background: #03aac7c7;
+    color: #E9EEF2;
+}
