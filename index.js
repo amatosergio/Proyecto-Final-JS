@@ -22,15 +22,15 @@ class Producto {
         </div>
     `
         const container = document.getElementById('container')
-        container.innerHTML += card 
-        }
-        agregarEvento (){
-            const btnAgregar = document.getElementById(this.id)
-            const productoElegido= stock.find(prod => prod.id == this.id)
-            btnAgregar.addEventListener('click',()=> agregarCarrito (productoElegido))
-        } 
+        container.innerHTML += card
+    }
+    agregarEvento() {
+        const btnAgregar = document.getElementById(this.id)
+        const productoElegido = stock.find(prod => prod.id == this.id)
+        btnAgregar.addEventListener('click', () => agregarCarrito(productoElegido))
+    }
 }
-let iphone11 = new Producto('Iphone 11', 500, 10, 1,'./Imagenes/Iphone11.png')
+let iphone11 = new Producto('Iphone 11', 500, 10, 1, './Imagenes/Iphone11.png')
 let iphone12 = new Producto('Iphone 12', 700, 5, 2, './Imagenes/Iphone12Pro.png')
 let iphone13 = new Producto('Iphone 13', 900, 5, 3, './Imagenes/Iphone13Pro.png')
 let macbookAirM1 = new Producto('Macbook Air M1', 900, 10, 4, './Imagenes/macbookairm1.jpg')
@@ -51,28 +51,25 @@ stock.push(macbookAirM1)
 stock.push(macbookAirM2)
 stock.push(macbookPro)
 
-stock.forEach(e=>{
+stock.forEach(e => {
     e.desplegarApple()
 })
-stock.forEach(e=>{
+stock.forEach(e => {
     e.agregarEvento()
 })
-function agregarCarrito(stock) { 
-    const enCarr= carrito.find( prod=>prod.id==stock.id)
-    
-    if(!enCarr){
-        carrito.push({...stock, cantidad:1})
-    }else{
-        const withoutCar= carrito.filter(prod => prod.id !=stock.id)
-        carrito=[...withoutCar,{...enCarr, cantidad: enCarr.cantidad+1}]
+function agregarCarrito(stock) {
+    const enCarr = carrito.find(prod => prod.id == stock.id)
+
+    if (!enCarr) {
+        carrito.push({ ...stock, cantidad: 1 })
+    } else {
+        const withoutCar = carrito.filter(prod => prod.id != stock.id)
+        carrito = [...withoutCar, { ...enCarr, cantidad: enCarr.cantidad + 1 }]
     }
-   
     counter.innerHTML = carrito.reduce((acc, prod) => acc + prod.cantidad, 0)
-
-} 
+}
 const counter = document.getElementById('cartCounter')
-counter.innerHTML = carrito.reduce((acc, prod) => acc + prod.cantidad, 0) 
-
+counter.innerHTML = carrito.reduce((acc, prod) => acc + prod.cantidad, 0)
 
 
 
