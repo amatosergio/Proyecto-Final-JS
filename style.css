@@ -83,3 +83,26 @@ p{
     background: #03aac7c7;
     color: #E9EEF2;
 }
+
+.TituloContacto{
+    color: black;
+    width: 100vw;
+    text-align: center;
+    padding: 40px;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#formulario {
+    color: white;
+    max-width: 100vh;
+    font-size: 20px;
+    position: relative;
+    padding: 15px 40px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    border-radius: 20px;
+    background: #262626;
+    box-shadow: 6px 6px 10px rgb(66, 66, 66);
+    font-family: Arial, Helvetica, sans-serif;
+}

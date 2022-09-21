@@ -38,8 +38,6 @@ let macbookAirM2 = new Producto('Macbook Air M2', 1200, 10, 5, './Imagenes/macbo
 let macbookPro = new Producto('Macbook Pro M1pro', 1900, 5, 6, './Imagenes/macbookprom1projpg.jpg')
 
 let totalCompra = 0
-/* let producto = parseInt(prompt('Ingresa el numero del producto que quieres comprar: 1.Iphone 11 - 2.Iphone 12- 3.Iphone 13 4.Macbook Air M1- 5.Macbook air M2- 6.Macbook Pro M1Pro-')
-) */
 let seguirCompra = true
 let decision
 let carrito = []
@@ -72,38 +70,9 @@ const counter = document.getElementById('cartCounter')
 counter.innerHTML = carrito.reduce((acc, prod) => acc + prod.cantidad, 0)
 
 
+const formulario = document.getElementById('formulario')
+formulario.onsubmit = (event) =>{
+event.preventDefault()
+console.log(event.target.children)
 
-
-
-
-
-while (seguirCompra === true) {
-    const productoElegido = stock.find(prod => prod.id === producto)
-    if (producto) {
-        totalCompra = totalCompra + productoElegido.precio
-    }
-    else {
-        producto = parseInt(prompt('Ingresa el numero del producto que quieres comprar: 1.Iphone 11 - 2.Iphone 12- 3.Iphone 13 4.Macbook Air M1- 5.Macbook air M2- 6.Macbook Pro M1Pro-'))
-        continue
-    }
-    decision = parseInt(prompt('Quieres seguir agregando productos? 1.Si - 2.No'))
-    if (decision === 1) {
-        producto = parseInt(
-            prompt(
-                'Ingresa el numero del producto que quieres comprar: 1.Iphone 11 - 2.Iphone 12- 3.Iphone 13 4.Macbook Air M1- 5.Macbook air M2- 6.Macbook Pro M1Pro-'
-            )
-        )
-    } else if (decision === 2) {
-        seguirCompra = false
-    }
 }
-alert('El valor total , sin tax es : ' + totalCompra + " dolares")
-
-function calculartax(valor) {
-    const impuestos = valor * (8 / 100)
-    return valor + impuestos
-}
-let valorFinalConTax = calculartax(totalCompra)
-alert('El valor final a pagar , con tax incluidos es de : ' + valorFinalConTax)
-alert('¡ Muchas Gracias por tu compra !')
-
