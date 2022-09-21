@@ -84,8 +84,8 @@ p{
     color: #E9EEF2;
 }
 
-.TituloContacto{
-    color: black;
+#tituloForm{
+   color: rgb(0, 0, 0);
     width: 100vw;
     text-align: center;
     padding: 40px;
@@ -96,7 +96,7 @@ p{
 #formulario {
     color: white;
     max-width: 100vh;
-    font-size: 20px;
+    font-size: 25px;
     position: relative;
     padding: 15px 40px;
     margin: 0 auto;

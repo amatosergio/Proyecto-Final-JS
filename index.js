@@ -52,9 +52,11 @@ stock.push(macbookPro)
 stock.forEach(e => {
     e.desplegarApple()
 })
+
 stock.forEach(e => {
     e.agregarEvento()
 })
+
 function agregarCarrito(stock) {
     const enCarr = carrito.find(prod => prod.id == stock.id)
 
@@ -69,10 +71,38 @@ function agregarCarrito(stock) {
 const counter = document.getElementById('cartCounter')
 counter.innerHTML = carrito.reduce((acc, prod) => acc + prod.cantidad, 0)
 
-
+const titulo = document.getElementById('tituloForm')
 const formulario = document.getElementById('formulario')
-formulario.onsubmit = (event) =>{
-event.preventDefault()
-console.log(event.target.children)
+formulario.onsubmit = (event) => {
+    event.preventDefault()
+    const datosUsuario = []
+    for (const input of event.target.children) {
+        const obj = {}
+        obj['tipo'] = input.name
+        obj['valor'] = input.value
+        datosUsuario.push(obj)
+    }
+    localStorage.setItem('info', JSON.stringify(datosUsuario))
+    
+}
 
+
+    const info = JSON.parse(localStorage.getItem('info'))
+    let nombre = ''
+    let apellido = ''
+    info.forEach(dato => {
+        if (dato.tipo === 'name') {
+            nombre = dato.valor
+        }
+        if (dato.tipo === 'lastname') {
+            apellido = dato.valor
+        }
+    })
+
+    console.log('name' ,nombre)
+    console.log('apellido' ,apellido)
+
+
+if ( nombre!== '' || apellido!== '') {
+titulo.innerText = `Hola  ${nombre} ${apellido}, tu consulta fue recibida correctamente` 
 }
