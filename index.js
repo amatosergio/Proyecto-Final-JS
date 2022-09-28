@@ -83,10 +83,7 @@ formulario.onsubmit = (event) => {
         datosUsuario.push(obj)
     }
     localStorage.setItem('info', JSON.stringify(datosUsuario))
-    
 }
-
-
     const info = JSON.parse(localStorage.getItem('info'))
     let nombre = ''
     let apellido = ''
@@ -102,7 +99,18 @@ formulario.onsubmit = (event) => {
     console.log('name' ,nombre)
     console.log('apellido' ,apellido)
 
-
 if ( nombre!== '' || apellido!== '') {
 titulo.innerText = `Hola  ${nombre} ${apellido}, tu consulta fue recibida correctamente` 
+}
+
+const boton= document.getElementById('boton')
+boton.onclick= mostrarAlert 
+function mostrarAlert(){
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Su consulta fue enviada correctamente',
+        showConfirmButton: false,
+        timer: 1500
+      })
 }
