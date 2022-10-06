@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 
@@ -8,7 +8,8 @@ header {
     background-color: #03aac7c7;
     height: 10vh;
 }
-#TituloPrincipal{
+
+#TituloPrincipal {
     color: black;
     width: 100vw;
     text-align: center;
@@ -16,17 +17,19 @@ header {
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
 }
-.cart{
+
+.cart {
     position: absolute;
     right: 100px;
     top: 10px;
     text-decoration: none;
 }
 
-.cartIcon{
+.cartIcon {
     width: 50px;
 }
-#cartCounter{
+
+#cartCounter {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -38,22 +41,23 @@ header {
     text-align: center;
 }
 
-#container{
+#container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20;
     margin: 0 auto;
     margin-top: 30px;
 }
-p{
+
+p {
     color: #E9EEF2;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     padding: 10px;
-    
+
 }
 
-.card{
+.card {
     max-width: 250px;
     position: relative;
     padding: 15px 10px;
@@ -62,15 +66,16 @@ p{
     border-radius: 20px;
     background: black;
     box-shadow: 6px 6px 10px rgb(66, 66, 66);
-}  
+}
 
-.imgProducto{
+.imgProducto {
     position: relative;
     width: 100%;
     border-radius: 10px;
     margin: 5px 0;
 }
-.btnAgregar{
+
+.btnAgregar {
     height: 40px;
     padding: 0 25px;
     border-radius: 25px;
@@ -79,13 +84,14 @@ p{
     color: black;
     transition: .5s ease;
 }
-.btnAgregar:hover{
+
+.btnAgregar:hover {
     background: #03aac7c7;
     color: #E9EEF2;
 }
 
-#tituloForm{
-   color: rgb(0, 0, 0);
+#tituloForm {
+    color: rgb(0, 0, 0);
     width: 100vw;
     text-align: center;
     padding: 40px;
@@ -105,4 +111,20 @@ p{
     background: #262626;
     box-shadow: 6px 6px 10px rgb(66, 66, 66);
     font-family: Arial, Helvetica, sans-serif;
+}
+
+#api {
+    height: 80px;
+    padding: 0 25px;
+    position: relative;
+    left: 900px;
+    border-radius: 25px;
+    border: 2px solid #326789;
+    background: #E9EEF2;
+    color: black;
+    transition: .5s ease;
+}
+#api:hover {
+    background: #03aac7c7;
+    color: #E9EEF2;
 }

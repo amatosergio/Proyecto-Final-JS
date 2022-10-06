@@ -114,3 +114,26 @@ function mostrarAlert(){
         timer: 1500
       })
 }
+
+const api =document.getElementById('api')
+const cardGroup = document.getElementById('group')
+
+api.onclick = async() => {
+    const info =await fetch('https://rickandmortyapi.com/api/character')
+    const infoJson = await info.json()
+    const personajes = infoJson.results
+    personajes.splice(10)
+    personajes.forEach((element) =>{
+        const divPersonaje = document.createElement('div')
+        divPersonaje.setAttribute('class', 'card')
+        divPersonaje.innerHTML =  `
+        <img src=${element.image} class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">${element.name}</h5>
+                <p class="card-text">${element.status}</p>
+                <p class="card-text"><small class="text-muted">${element.species}</small></p>
+              `
+              cardGroup.append(divPersonaje)
+            })
+
+    }
